@@ -1,0 +1,178 @@
+/*
+@autor Wagner Holt
+*/
+/*======================== layout =====================*/
+html, body, .capa{ /* tamanho do body e capa em relação ao html*/
+	height: 100%;
+	overflow: auto;
+}
+body {
+	
+	background: url('imagens/capa.png'),/*imagem de fundo*/
+	            url('imagens/ruido.png'), /*imagem de fundo trasnparente*/
+	            linear-gradient(50deg,#ff4169, #7c26f8); /*cores de fundo em degrade e rotação50 deg*/
+	background-attachment: fixed; /*esta propriedde deixa a imagem fixa no body*/
+	font-family: Helvetica, Arial, sans-serif;
+	overflow-x: hidden; /*esconde a barra na horizontal*/
+}
+
+/*======================== Barra Navegação =====================*/
+.img-logo{
+	height: 40px;
+	width: 132px;
+	display: block;
+	background: url('imagens/spotify.svg') no-repeat; /*formato svg é oque me melhor se adequa a tamanhos de telas - no-repeat não repete a imagem*/
+	background-size: contain; /*esta propriedade se adequa ao tamanho definido pelo img-logo*/
+	color: transparent;
+}
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0, 0, 0,0.6 );
+	border: none;
+}
+.navbar-brand{
+	padding: 5px 15px;
+}
+.divisor {
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+.navbar-inverse .navbar-nav>li>a, footer .nav a{
+	color: white;
+}
+.navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover{
+	color: #9bf0e1;
+	background: none;
+}
+
+/*======================== Imagem de Capa =====================*/
+.capa {
+	display: table;/*a capa vai crescer de acordo com o conteúdo em tabela*/
+	width: 100%;
+}
+.texto-capa {
+	text-align: center;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+}
+/*-----------------------------Botões ------------------------*/
+.btn-custom {
+	color: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px; /*IE 9*/
+	-moz-border-radius: 500px; /*Chrome, Safari, opera*/
+
+	text-transform: uppercase; /*trandorma os texto em maiúsculas*/
+	
+	transition: background 0.8s, color:0.8s;
+}
+.btn-roxo {
+	background: #7c25f8;
+}
+.btn-roxo:hover {
+	background: #6207e3;
+	color: white;
+}
+.btn-branco{
+	border: 2px solid white;
+}
+.btn-branco:hover {
+	background-color: white;
+	color: black;
+}
+/*-----------------------Seção Serviços ------------------------*/
+#servicos {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.albuns {
+	padding: 10px 0 10px 0;
+}
+/*-----------------------Seção Recursos ------------------------*/
+#recursos {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+.rotacionar {
+	transform: rotate(30deg);
+	-webkit-transform:rotate(30deg); /* Chrome, Safari, Opera*/
+	-ms-transform:rotate(30deg); /* IE 9 */
+	padding-left: 80px;
+}
+/*-----------------------Seção Rodapé ------------------------*/
+
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative; /* o footer fica na posição encima da imagem do cel */
+}
+.item-rede-social {
+	float: right;
+}
+/*======================== Tpografia/ textos =====================*/
+h1 {
+	font-weight: 900px;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+}
+/*Media queries*/
+/*xs < 768*/
+@media screen and (max-width: 767px){ /*xs < 768*/
+	h1 {
+		font-size: 50px;
+	}
+	.btn-custom {
+		margin: 10px 15px;
+	}
+
+}
+@media screen and (min-width: 768px){ /*sm < 768*/
+	h1 {
+		font-size: 70px;
+	}
+	.btn-custom {
+		margin: 10px 15px;
+	}
+}
+@media screen and (min-width: 992px){ /*md < 768*/
+	h1 {
+		font-size: 80px;
+	}
+	.btn-custom {
+		margin: 10px 15px;
+	}
+}
+@media screen and (max-width: 1200px){ /*lg < 768*/
+	h1 {
+		font-size: 100px;
+	}
+	.btn-custom {
+		margin: 10px 15px;
+	}
+} /*Fim Media Queries*/
+h2 {
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+h3 {
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+#rodape h4 {
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+#servicos h2, #servicos h3 {
+	color: #7c25f8;
+}
+#recursos h3 {
+	color: #9bf0e1;
+}
